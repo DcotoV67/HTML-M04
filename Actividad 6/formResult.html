@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Form result</title>
+		
+		<script type="text/javascript">
+			function getQueryStringValue (key) {  
+			  	return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+			}
+			
+			window.onload = function() {
+				var fields = document.location.search.substring(1).split("&");
+				var msg = "S'ha rebut un formulari amb les següents dades: \n";
+				
+				var f;
+				for(i in fields){
+					f = unescape(fields[i].replace(/\+/g, '%20')).split("=");
+					msg += f[0] + ": " + f[1] + "\n";
+				}
+				
+				alert(msg);
+			};
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

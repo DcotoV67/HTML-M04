@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Entregable 6</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="validator.js"></script>
+	</head>
+  <body>
+    <h1>Contacto</h1>
+
+    <p>Porfavor, rellene el siguiente formulario si quiere ponerse en contacto con nosotros.<br>
+      Si desea volver a la página de inicio haga click aquí: <a href="index.html"><b>Home</b></a>
+    </p>
+
+    <form action="formResult.html" method="get" id="formulario">
+
+      <table style="width:50%">
+        <tr>
+          <td><label for="nombre">Nombre:</label></td>
+          <td><input type="text" name="nombre" id="nombre" placeholder="tu nombre"></td>
+          <td><label for="apellido">Apellido:</label></td>
+          <td><input type="text" name="apellido" id="apellido" placeholder="tu apellido"></td>
+        </tr>
+        <tr>
+          <td><label for="edad">Edad:</label></td>
+          <td><input type="number" name="edad" id="edad" placeholder="20"></td>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" name="email" id="email" placeholder="tu email"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Genero:</td>
+          <td colspan="2">Idioma:</td>
+        </tr>
+        <tr>
+          <td><label for="hombre">Hombre</label></td>
+          <td><input type="radio" name="genero" id="hombre" value="Hombre"></td>
+          <td><label for="cat">Catalán</label></td>
+          <td><input type="checkbox" name="idioma" id="cat" value="Catalan" checked></td>
+        </tr>
+        <tr>
+          <td><label for="mujer">Mujer</label></td>
+          <td><input type="radio" name="genero" id="mujer" value="Mujer"></td>
+          <td><label for="cast">Castellano</label></td>
+          <td><input type="checkbox" name="idioma" id="cast" value="Castellano"></td>
+        </tr>
+        <tr>
+          <td><label for="otros">Otros</label></td>
+          <td><input type="radio" name="genero" id="otros" value="Otro" checked></td>
+          <td><label for="ing">Inglés</label></td>
+          <td><input type="checkbox" name="idioma" id="ing" value="Ingles"></td>
+        </tr>
+        <tr>
+          <td><label for="contacto">Tipo de contacto:</label></td>
+          <td colspan="3"><label for="contacto">
+            <select id="contacto" name="contacto">
+              <option value="sugerencia">Sugerencia</option>
+              <option value="reclamación">Reclamacion</option>
+              <option value="otro" selected>Otro</option>
+            </select>
+          </label></td>
+        </tr>
+        <tr>
+          <td><label for="comentario">Comentarios:</label></td>
+          <td colspan="3"><label for="comentario"><textarea rows="10" cols="50" id="comentario" name="comentario" placeholder="Sus comentarios aquí..."></textarea></label></td>
+        </tr>
+        <tr>
+          <td colspan="2"><label for="limpiar"><input type="reset" value="Limpiar" id="limpiar"></label></td>
+          <td colspan="2"><label for="enviar"><input type="submit" value="Enviar" id="enviar"></label></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
